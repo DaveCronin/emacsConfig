@@ -5,6 +5,11 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+;; Added this to githup publicly so I can get my .emacs from anywhere
+
+;; to install this config
+;; curl https://raw.githubusercontent.com/DaveCronin/emacsConfig/master/.emacs > ~/.emacs
+
 (define-minor-mode sticky-buffer-mode
   "Make the current window always display this buffer."
   nil " sticky" nil
