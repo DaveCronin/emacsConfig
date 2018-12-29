@@ -121,3 +121,9 @@
 
 (define-key global-map '[(meta ?z)] 'ashell)
 ;; end
+
+;; reload .emacs (useful when working on config)
+(global-set-key (kbd "M-d")
+                (lambda () (interactive)
+                  (when (equal (file-name-nondirectory buffer-file-name) ".emacs")
+                  (eval-buffer) (message "Reloaded .emacs"))))
