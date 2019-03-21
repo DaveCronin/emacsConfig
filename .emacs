@@ -8,7 +8,7 @@
 ;; Added this to githup publicly so I can get my .emacs from anywhere
 
 ;; to install this config
-;; curl https://raw.githubusercontent.com/DaveCronin/emacsConfig/master/.emacs > ~/.emacs
+;; curl https://raw.githubusercontent.com/davecronin/emacsConfig/master/.emacs > ~/.emacs
 
 (define-minor-mode sticky-buffer-mode
   "Make the current window always display this buffer."
@@ -105,7 +105,7 @@
 ;; a number or letter
 (require 'shell)
 
-(defun ashell (arg)
+(defun shell_shortcut (arg)
    (interactive "c")
    (if (or (< arg 32) (> arg 126))
        (error "Please use printable character for shell name"))
@@ -119,7 +119,7 @@
          ;(setq comint-input-sender (function shellx-simple-send))
  	(rename-buffer (format "*shell*<%c>" arg))))))
 
-(define-key global-map '[(meta ?z)] 'ashell)
+(define-key global-map '[(meta ?z)] 'shell_shortcut)
 ;; end
 
 ;; reload .emacs (useful when working on config)
